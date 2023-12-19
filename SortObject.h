@@ -3,7 +3,7 @@
 #include <QPainter>
 
 //排序对象父类，提供公共接口给canvas
-//龚建波 2022-2-3
+
 class SortObject : public QObject
 {
     Q_OBJECT

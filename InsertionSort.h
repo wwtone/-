@@ -5,7 +5,7 @@
 #include <QVariantAnimation>
 
 //插入排序
-//龚建波 2022-2-4
+
 class InsertionSort : public SortObject
 {
     Q_OBJECT

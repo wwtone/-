@@ -5,7 +5,7 @@
 #include <QVariantAnimation>
 
 //选择排序
-//龚建波 2022-2-4
+
 class SelectionSort : public SortObject
 {
     Q_OBJECT

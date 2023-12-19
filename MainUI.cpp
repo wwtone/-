@@ -49,3 +49,15 @@ void MainUI::init()
         ui->btnSort->setEnabled(!running);
     });
 }
+
+void MainUI::on_analyze_clicked()
+{
+//    const int type = ui->comboType->currentIndex();
+//    const int count= ui->spinInterval->value();
+
+    analyze_window *sub_window = new analyze_window;
+    sub_window->show();
+
+}
+
+

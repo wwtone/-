@@ -11,7 +11,10 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Visual Sort (by GongJianBo1992)</string>
+   <string>Visual Sort _wwt</string>
+  </property>
+  <property name="toolTipDuration">
+   <number>-1</number>
   </property>
   <property name="styleSheet">
    <string notr="true">/* 主体 */
@@ -263,6 +266,17 @@ border-color: rgb(255, 170, 128);
         </layout>
        </item>
        <item>
+        <layout class="QHBoxLayout" name="horizontalLayout_7">
+         <item>
+          <widget class="QPushButton" name="analyze">
+           <property name="text">
+            <string>排序性能分析</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
         <spacer name="verticalSpacer">
          <property name="orientation">
           <enum>Qt::Vertical</enum>
@@ -270,7 +284,7 @@ border-color: rgb(255, 170, 128);
          <property name="sizeHint" stdset="0">
           <size>
            <width>20</width>
-           <height>232</height>
+           <height>40</height>
           </size>
          </property>
         </spacer>
@@ -280,7 +294,7 @@ border-color: rgb(255, 170, 128);
          <item>
           <widget class="QPushButton" name="btnSort">
            <property name="text">
-            <string>排序</string>
+            <string>排序可视化</string>
            </property>
           </widget>
          </item>
@@ -317,7 +331,7 @@ border-color: rgb(255, 170, 128);
      <x>0</x>
      <y>0</y>
      <width>783</width>
-     <height>22</height>
+     <height>21</height>
     </rect>
    </property>
   </widget>

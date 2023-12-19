@@ -3,7 +3,7 @@
 #include "SortObject.h"
 
 //绘制排序的widget，通过切换sortobject来演示各种排序效果
-//龚建波 2022-2-3
+
 class MainCanvas : public QWidget
 {
     Q_OBJECT

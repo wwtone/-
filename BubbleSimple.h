@@ -5,7 +5,7 @@
 #include <QVariantAnimation>
 
 //使用冒泡排序对动画逻辑进行测试
-//龚建波 2022-2-2
+
 class BubbleSimple : public QWidget
 {
     Q_OBJECT

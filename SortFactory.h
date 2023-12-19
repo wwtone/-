@@ -3,7 +3,7 @@
 #include "SortObject.h"
 
 //生成SortObject
-//龚建波 2022-2-3
+
 class SortFactory : public QObject
 {
     Q_OBJECT

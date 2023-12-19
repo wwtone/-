@@ -2,8 +2,7 @@
 #include <QPaintEvent>
 #include <QPainter>
 
-MainCanvas::MainCanvas(QWidget *parent)
-    : QWidget(parent)
+MainCanvas::MainCanvas(QWidget *parent) : QWidget(parent)
 {
     setAttribute(Qt::WA_StyledBackground, true);
 }

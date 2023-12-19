@@ -5,7 +5,7 @@
 #include <QVariantAnimation>
 
 //希尔排序
-//龚建波 2022-2-12
+
 class ShellSort : public SortObject
 {
 public:

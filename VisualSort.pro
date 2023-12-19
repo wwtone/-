@@ -1,7 +1,7 @@
 QT += core
 QT += gui
 QT += widgets
-
+QT +=charts
 CONFIG += c++11
 CONFIG += utf8_source
 
@@ -17,7 +17,6 @@ DEFINES += QT_DEPRECATED_WARNINGS
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
-    BubbleSimple.cpp \
     BubbleSort.cpp \
     InsertionSort.cpp \
     MainCanvas.cpp \
@@ -27,6 +26,9 @@ SOURCES += \
     ShellSort.cpp \
     SortFactory.cpp \
     SortObject.cpp \
+    analyze_capacity.cpp \
+    analyze_picture.cpp \
+    analyze_window.cpp \
     main.cpp
 
 # Default rules for deployment.
@@ -35,10 +37,10 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 FORMS += \
-    MainUI.ui
+    MainUI.ui \
+    analyze_window.ui
 
 HEADERS += \
-    BubbleSimple.h \
     BubbleSort.h \
     InsertionSort.h \
     MainCanvas.h \
@@ -47,4 +49,7 @@ HEADERS += \
     SelectionSort.h \
     ShellSort.h \
     SortFactory.h \
-    SortObject.h
+    SortObject.h \
+    analyze_capacity.h \
+    analyze_picture.h \
+    analyze_window.h

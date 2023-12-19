@@ -22,7 +22,7 @@ QuickSort::QuickSort(QObject *parent)
     connect(&animation, &QVariantAnimation::valueChanged, this, &SortObject::updateRequest);
 }
 
-/*//快速排序挖坑法
+/*
 template<typename T>
 void quick_sort(std::vector<T>& arr, int low, int high)
 {
@@ -164,11 +164,11 @@ void QuickSort::draw(QPainter *painter, int width, int height)
     painter->fillRect(10, 12, 10, 10, QColor(0, 170, 255));
     painter->drawText(30, 20, "排序区间");
     painter->fillRect(10, 32, 10, 10, QColor(255, 170, 0));
-    painter->drawText(30, 40, "坑位");
+    painter->drawText(30, 40, "Base");
     painter->fillRect(10, 52, 10, 10, QColor(0, 220, 0));
-    painter->drawText(30, 60, "< 参照值");
+    painter->drawText(30, 60, "Left");
     painter->fillRect(10, 72, 10, 10, QColor(230, 0, 0));
-    painter->drawText(30, 80, "> 参照值");
+    painter->drawText(30, 80, "Right");
 }
 
 void QuickSort::initArr(int count)

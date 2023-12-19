@@ -6,7 +6,7 @@
 #include <QVariantAnimation>
 
 //快速排序
-//龚建波 2022-02-08
+
 class QuickSort : public SortObject
 {
     Q_OBJECT
