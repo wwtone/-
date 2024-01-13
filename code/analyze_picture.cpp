@@ -26,8 +26,8 @@ void analyzeCanvas::initUI()
       mAxY->setRange(0, 10);
       // Y轴分等份
       mAxY->setTickCount(10);
-      mAxX->setRange(1,5000);
-      mAxX->setTickCount(20);
+      mAxX->setRange(1,500);
+      mAxX->setTickCount(10);
       // 分辨设置X轴和Y轴的标题
       //mAxX->setTitleText(QString(tr("数据")));
       mAxY->setTitleText(QString(tr("密度")));
@@ -76,13 +76,13 @@ void analyzeCanvas::initUI()
 void analyzeCanvas::draw(QVector<double>& arr){
     mLineSeries->clear();
     //m_ptrChart->removeAllSeries();
-    QVector<double> data(10000,0);
+    QVector<double> data(500,0);
     for(int i=0;i<arr.size();i++){
         data[int(arr[i])]++;
     }
 
      m_ptrChartView->setChart(m_ptrChart);
-      for(int i = 0 ;i <5000;i++){
+      for(int i = 0 ;i <500;i++){
              mLineSeries->append(i, data[i]);
      }
 

@@ -8,7 +8,7 @@ QVector<double> a_c::num_generate(int size){
     random_device rd;
     mt19937 gen(rd());
 
-    uniform_real_distribution<double> distribution(1, 9999);
+    uniform_real_distribution<double> distribution(1, 500);
     for (int i = 0; i < size; ++i) {
             arr.push_back(distribution(gen));
         }

@@ -55,21 +55,37 @@ void analyze_window::on_a_start_clicked()
     if(ui->type_select->currentIndex()==0&&amount!=0){
         text="总排序数："+QString::number(amount)+"\n";
         QVector<double> array=ac_object.num_generate(amount);
-        text=ac_object.analyze(amount,array);
-        //ui->al_picture->draw(array);
+        text+=ac_object.analyze(amount,array);
+        ui->al_picture->draw(array);
 
         ui->textout->setText(text);
 
     }
-    else if(ui->type_select->currentIndex()==1&&amount!=0){
+    else if(ui->type_select->currentIndex()==1){
+        QVector<double> array;
+           QString filePath = selectedFilePath; // 使用 QString 指定文件路径
+           QFile file(filePath);
+           if (file.open(QIODevice::ReadOnly | QIODevice::Text)) {
+               QTextStream in(&file);
+               while (!in.atEnd()) {
+                   QString line = in.readLine();
+                   bool ok;
+                   double number = line.toDouble(&ok);
+                   if (ok) { // 如果转换成功
+                       array.push_back(number);
+                   }
+               }
+               file.close();
+           } else {
+               // 文件打开失败的处理
+               qDebug() << "无法打开文件";
+           }
 
-
+           text=ac_object.analyze(amount,array);
+           ui->al_picture->draw(array);
+           ui->textout->setText(text);
 
     }
-
-    else ui->textout->setText("未输入数字");
-
-
 
 
 }
